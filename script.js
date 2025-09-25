@@ -1,5 +1,5 @@
 const API_URL = "https://api.coingecko.com/api/v3/coins/markets";
-const TARGET = new Set(["btc","eth","bnb","sol","okb","uni"]);
+const TARGET = new Set(["btc","eth","bnb","sol","okb"]);
 const HEADERS = [
   "名称","符号",
   "历史最高价 (USD)","现价 (USD)",
@@ -51,9 +51,9 @@ function renderTable(data) {
     .join("");
 }
 
-// 启动
 fetchData()
   .then(computeMetrics)
   .then(renderTable)
   .catch(err => console.error(err));
+
 
