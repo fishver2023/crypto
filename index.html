@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>加密货币历史最高价对比</title>
+    <title>加密货币市场数据</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* 通用样式 */
@@ -54,25 +54,6 @@
 
         tr:hover {
             background-color: #e0f7fa;
-        }
-
-        /* 手机端样式 */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            th, td {
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            th, td {
-                padding: 8px;
-            }
         }
 
         /* 按钮样式 */
@@ -129,8 +110,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>加密货币历史最高价对比</h1>
-        <button class="refresh-button" onclick="fetchData()">刷新数据</button>
+        <h1>加密货币市场数据</h1>
+        <button class="refresh-button" onclick="fetchAndRenderData()">刷新数据</button>
         <div class="loader" id="loader">
             <div></div><div></div><div></div>
         </div>
